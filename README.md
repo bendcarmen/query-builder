@@ -15,7 +15,7 @@ Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 
 ![usage](./assets/screenshot2.png)
 
-**As the user continues to add terms, they will be automatically joined with an 'OR' operator**
+**As the user continues to add terms, terms in a group will be automatically joined with an 'OR' operator**
 
 ![usage](./assets/screenshot3.png)
 
