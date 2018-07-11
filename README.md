@@ -1,11 +1,11 @@
-# Query Builder
+# Query Builder Proof of Concept 0.0.1
 
 Query Builder is a proof of concept that allows a researcher to construct queries comprised of grouping of medical terms.  
 
 
 Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 
-## Version 0.0.1 Quick User Guide:
+## Getting Started:
 
 **The user can click on the input box to show available terms and filter them by entering text**
 
@@ -25,13 +25,49 @@ Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 
 **The user can use the input to select terms to add to the newly created group**
 
+*filter terms:*
 ![usage](./assets/screenshot5.png)
+
+*add a term to the new group*
 ![usage](./assets/screenshot6.png)
 
 **The user can also delete terms by clicking the 'X' it's upper right corner**
-<kbd>
+
 ![usage](./assets/screenshot7.png)
-</kdb>
+
+
+### Install
+
+Follow these steps to get development environment running.
+
+### Prerequisites
+
+The following software is required to be installed on your system:
+
+* **[Node](https://nodejs.org/)**  8.x
+* **[NPM](https://www.npmjs.com/)** 5.x 
+* **[Yarn](https://yarnpkg.com/lang/en/)** 5.x 
+
+* Clone __'query_builder'__ repository from GitHub
+
+  ```bash
+  git clone https://github.com/bendcarmen/query-builder
+  ```
+* Install node modules
+
+   ```bash
+   cd query-builder
+   yarn
+   ```
+
+* Fire up the app locally and watch for changes while developing
+
+  ```bash
+  yarn start
+  ```
+
+The app will be available at **[http://localhost:8888/](http://localhost:8888/)**  after launching.
+
 
 ### 0.0.2 Roadmap:
 * Allow a term to be negated '!'
