@@ -31,7 +31,7 @@ Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 *add a term to the new group*
 ![usage](./assets/screenshot6.png)
 
-**The user can also delete terms by clicking the 'X' it's upper right corner**
+**The user can also delete terms by clicking the 'X' in upper right corner of a term**
 
 ![usage](./assets/screenshot7.png)
 
