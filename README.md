@@ -73,7 +73,7 @@ The app will be available at **[http://localhost:8888/](http://localhost:8888/)*
 * Responsive for mobile.
 * Allow a term to be negated '!'
 * Allow for groups to be deleted
-* Allow for gropus to be negated '!'
+* Allow for groups to be negated '!'
 
 ### Feature Considerations
 * add toggle to 'AND' and 'OR' operators
