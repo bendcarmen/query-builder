@@ -8,9 +8,9 @@ Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 ## Version 0.0.1 Quick User Guide:
 
 **The user can click on the input box to show available terms and filter them by entering text**
-<kdb>
+
 ![usage](./assets/screenshot1.png)
-</kdb>
+
 **The user can then select a term they want to add to the query**
 
 ![usage](./assets/screenshot2.png)
