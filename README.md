@@ -29,9 +29,9 @@ Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 ![usage](./assets/screenshot6.png)
 
 **The user can also delete terms by clicking the 'X' it's upper right corner**
-
+<kbd>
 ![usage](./assets/screenshot7.png)
-
+</kdb>
 
 ### 0.0.2 Roadmap:
 * Allow a term to be negated '!'
