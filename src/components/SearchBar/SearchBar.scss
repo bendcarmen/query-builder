@@ -1,0 +1,95 @@
+$search-input-height: 30px;
+$search-input-width: 280px;
+$filtered-list-height: 50vh;
+
+.SearchBar {
+  width: 100%;
+  position: relative;
+  & div.searchResultList {
+    position: absolute;
+    margin: 0px;
+    width: 50%;
+    left: 25%;
+    padding: 0px;
+    background-color: rgba(108, 140, 160, .95);
+    border: 1px solid black;
+    border-radius: 6px;
+    color: #fff;
+    overflow: auto; 
+    max-height: 600px; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    & .searchResult:hover {
+      background: rgba(255, 255, 255, .2);
+      cursor: pointer;
+      border: 1px solid white;
+      flex: 0 0 202px;
+      max-width: 202px;
+    }
+    & .searchResult {
+      -webkit-transition-duration: 0.25s;
+      transition-duration: 0.25s;
+      border: 1px solid rgba(255, 255, 255, .2);
+      text-align: center;
+      margin: 5px;
+      padding: 5px;
+      flex: 0 0 200px;
+      max-width: 200px;
+      overflow: hidden;
+      color: rgb(238, 231, 231);
+      text-transform: lowercase;
+    }
+    & .joinOption {
+      text-align: center;
+      flex: 0 0 100%;
+      overflow: hidden;
+      color: #171e42;
+    }
+  }
+  & .SearchInput {
+    width: $search-input-width;
+    height: $search-input-height;
+    line-height: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: white;
+    border-radius: 3px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    font-weight: 300;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+  & .SearchInput:hover,
+  & .SearchInput:focus {
+    border: 1px solid black;
+  }
+  & .SearchInput:focus {
+    width: 310px;
+
+  }
+  & .button {
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+    width: 102px;
+    border: 0;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  & .join {
+    width: 80px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid rgba(255, 255, 255, .25);
+  }
+}
+

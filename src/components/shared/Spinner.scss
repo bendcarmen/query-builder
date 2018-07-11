@@ -1,0 +1,13 @@
+.Spinner {
+  width: 20%;
+  position: relative;
+  left: 40%;
+  text-align: center;
+  .fas {
+    color: #6BBE92;
+    font-size: 40px;
+  }
+  > div {
+    padding-top: 20px;
+  }
+}
