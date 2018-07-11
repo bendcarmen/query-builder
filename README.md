@@ -1,4 +1,3 @@
-# query-builder
-Proof of Concept for a SHRINE Query Builder
+# Query Builder
 
-https://bendcarmen.github.io/query-tool/
+Go **[here](https://bendcarmen.github.io/query-tool/)** for live demo.
