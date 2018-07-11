@@ -15,7 +15,7 @@ Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
 
 ![usage](./assets/screenshot2.png)
 
-**As the user continues to add terms, terms will be automatically joined with an 'OR' operator**
+**As the user continues to add terms, they will be automatically joined with an 'OR' operator**
 
 ![usage](./assets/screenshot3.png)
 
@@ -42,11 +42,11 @@ Follow these steps to get development environment running.
 
 ### Prerequisites
 
-The following software is required to be installed on your system:
+The following software is required to run this app locally:
 
 * **[Node](https://nodejs.org/)**  8.x
 * **[NPM](https://www.npmjs.com/)** 5.x 
-* **[Yarn](https://yarnpkg.com/lang/en/)** 5.x 
+* **[Yarn](https://yarnpkg.com/lang/en/)** 1.x 
 
 * Clone __'query_builder'__ repository from GitHub
 
