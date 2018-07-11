@@ -1,6 +1,6 @@
 # Query Builder Proof of Concept 0.0.1
 
-Query Builder is a proof of concept that allows a researcher to construct queries comprised of grouping of medical terms.  
+Query Builder is a proof of concept that allows a researcher to construct queries comprised of grouping of medical terms.  Please note, the first iteration of this app is intended for use for desktop machines only per our present use case, it is not yet optimized for mobile.
 
 
 Go **[here](https://bendcarmen.github.io/query-tool/)** for a live demo.
@@ -70,6 +70,7 @@ The app will be available at **[http://localhost:8888/](http://localhost:8888/)*
 
 
 ### 0.0.2 Roadmap:
+* Responsive for mobile.
 * Allow a term to be negated '!'
 * Allow for groups to be deleted
 * Allow for gropus to be negated '!'
