@@ -11,7 +11,7 @@ import {
 export function* doOntologyFetch(action) {
   try {
     yield put(fetchOntologyPending());
-    const url = 'http://api.jsonbin.io/b/5b44c652dd2c022ecda111ea';
+    const url = 'https://api.jsonbin.io/b/5b44c652dd2c022ecda111ea';
     const response = yield call(fetch, url);
     if (response.ok === true) {
       const data = yield apply(response, response.json);
