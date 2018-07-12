@@ -1,73 +1,45 @@
-import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
+import { func } from 'prop-types';
 import { queryBuilderType } from 'types';
-import {
-  fetchOntology,
-  addQueryTerm,
-  addQueryTermGroup,
-  removeQueryTerm,
-  removeQueryTermGroup,
-} from 'actions';
+
 import { SearchBar } from 'components/SearchBar';
 import { QueryDisplay } from 'components/QueryDisplay';
 import { QueryButton } from './QueryButton';
-import { Spinner } from 'components/shared';
 import { Background } from 'components/Background';
 import './QueryBuilder.scss';
 
-class QueryBuilder extends PureComponent {
-  static mapStateToProps = ({ queryBuilder, ontology }) => ({ ...queryBuilder, ontology });
-  static propTypes = queryBuilderType;
-
-  componentWillMount() {
-    const { dispatch, ontology } = this.props;
-    if (!ontology || !ontology.length) {
-      dispatch(fetchOntology());
-    }
+export class QueryBuilder extends PureComponent {
+  static propTypes = {
+    queryBuilder: { ...queryBuilderType },
+    addTerm: func.isRequired,
+    removeTerm: func.isRequired,
+    addGroup: func.isRequired,
   }
-
-  addQueryTerm = queryTerm =>
-    this.props.dispatch(addQueryTerm(queryTerm));
-
-  removeQueryTerm = (groupIndex, termIndex) =>
-    this.props.dispatch(removeQueryTerm(groupIndex, termIndex));
-
-  removeQueryTermGroup = groupIndex =>
-    this.props.dispatch(removeQueryTermGroup(groupIndex));
-
-  addQueryTermGroup = () => this.props.dispatch(addQueryTermGroup());
-
   render() {
-    const { ontology, canSubmit } = this.props;
+    const { queryBuilder } = this.props;
     return (
       <div className="QueryBuilderContainer">
-        {ontology.isBusy && <Spinner >Loading Ontology...</Spinner>}
-        {ontology.hasError && <span>Ontology Error </span>}
-        {!ontology.isBusy &&
-          <div>
-            <Background />
-            <SearchBar
-              terms={ontology.terms}
-              selectResult={this.addQueryTerm}
-            >
-              {[
-                <QueryButton
-                  isValid={canSubmit}
-                  click={this.addQueryTermGroup}
-                >
-                  AND
-                </QueryButton>,
-              ]}
-            </SearchBar>
-          </div>
-        }
+        <div>
+          <Background />
+          <SearchBar
+            terms={queryBuilder.ontology.terms}
+            selectResult={this.props.addTerm}
+          >
+            {[
+              <QueryButton
+                isValid={queryBuilder.canSubmit}
+                click={this.props.addGroup}
+              >
+                AND
+              </QueryButton>,
+            ]}
+          </SearchBar>
+        </div>
         <QueryDisplay
-          queryTermGroups={this.props.queryTermGroups}
-          removeTerm={this.removeQueryTerm}
+          queryTermGroups={queryBuilder.queryTermGroups}
+          removeTerm={this.props.removeTerm}
         />
       </div>
     );
   }
 }
-
-export default connect(QueryBuilder.mapStateToProps)(QueryBuilder);
